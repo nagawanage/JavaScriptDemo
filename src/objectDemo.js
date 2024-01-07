@@ -1,6 +1,4 @@
-console.group("object demo");
-console.warn("---------- Object Demo ----------");
-console.groupEnd();
+console.group("Object Demo");
 
 /* オブジェクト */
 // オブジェクトの配列のソート
@@ -11,7 +9,7 @@ const objArr = [
   { start: "2022-10-01", end: "2022-10-02" },
   { start: "2022-11-01", end: "2022-11-01" },
   { start: "1234555555", end: "2022-11-01" }, // 最初
-  { start: "aaaaaaaaaa", end: "2022-11-01" } // 最後
+  { start: "aaaaaaaaaa", end: "2022-11-01" }, // 最後
 ];
 
 objArr.sort((a, b) => (a.start + a.end > b.start + b.end ? 1 : -1));
@@ -33,7 +31,7 @@ console.log(
   Object.keys(obj).map((el, index) => {
     console.log("el>>", el); //a, b, c
     return obj[el];
-  })
+  }),
 ); //[2, 3, 5]
 
 // オブジェクトのリストでmapメソッド
@@ -101,10 +99,12 @@ console.log("unionObj:", unionObj(base, b));
 
 const arrx = [...Array(12)].map((_, i) => ({
   id: `nudge${("00" + i).slice(-2).toString()}`,
-  message: ""
+  message: "",
 }));
 console.log(arrx);
 
 const arrXX = [];
 arrXX.push(...["x"]);
 console.log(arrXX);
+
+console.groupEnd();

@@ -1,4 +1,5 @@
-console.log("---------- regex Demo ----------");
+console.group("regex demo");
+
 // 数字3桁
 const patternNum3 = /[0-9]{3}/;
 console.log(patternNum3.test(123));
@@ -32,3 +33,5 @@ if (regexTime.test(t)) {
 } else {
   console.log("正規表現パターンに一致していません。");
 }
+
+console.groupEnd();

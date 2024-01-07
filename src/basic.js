@@ -4,6 +4,8 @@ document.getElementById("app").innerHTML = `
 <h1>Basic Demo</h1>
 `;
 
+console.group("Basic demo");
+
 /* スプレッド構文 */
 console.log("-- スプレッド構文 -----");
 const arr = [1, 2];
@@ -84,7 +86,7 @@ const aaaa = [...Array(7)].map((_, i) => ({
   id: i.toString(),
   title: "",
   notifyReason: "",
-  message: ""
+  message: "",
 }));
 console.log(aaaa);
 
@@ -95,7 +97,7 @@ const inputStartSplit = inputStart.split("-");
 const startDate = new Date(
   inputStartSplit[0],
   inputStartSplit[1] - 1,
-  inputStartSplit[2]
+  inputStartSplit[2],
 );
 console.log("startDate=", startDate);
 const dt = startDate;
@@ -129,3 +131,5 @@ console.log(dateArr);
 //     console.log('既に登録済みです');
 //   }
 // }
+
+console.groupEnd();

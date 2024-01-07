@@ -1,6 +1,7 @@
 import moment from "moment";
 
-console.log("---------- moment Demo ----------");
+console.group("moment demo");
+
 console.log("moment=", moment());
 console.log("moment=", moment("2013-10-08"));
 
@@ -38,3 +39,5 @@ while (date < inputEnd) {
 }
 
 console.log(dateArr);
+
+console.groupEnd();
